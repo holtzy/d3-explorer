@@ -9,24 +9,26 @@ let rawModules = fs.readFileSync('modules.json');
 let modules = JSON.parse(rawModules);
 
 // merge
-const data = repos.data.repositoryOwner.repositories.nodes.map( repo => {
+const data = repos.data.repositoryOwner.repositories.nodes
 
-    const details = modules.filter( module => module.repo === repo.name)
-    console.log('---')
-    console.log(details)
+    .filter(repo => repo.name !== 'd3')
+    .map( repo => {
 
-    return({
-        name: repo.name,
-        url: repo.url,
-        description: repo.description,
-        forkCount: repo.forkCount,
-        stargazerCount: repo.stargazerCount,
-        issueCount: repo.issues.totalCount,
-        functions: details[0]?.items
-    })
+        const details = modules.filter( module => module.repo === repo.name)
+
+        return({
+            name: repo.name,
+            url: repo.url,
+            description: repo.description,
+            forkCount: repo.forkCount,
+            stargazerCount: repo.stargazerCount,
+            issueCount: repo.issues.totalCount,
+            functionCount: details[0]?.items.length,
+            children: details[0]?.items
+        })
 })
 
-fs.writeFile('./data.json', JSON.stringify(data), err => {
+fs.writeFile('./data.js', 'export const data = { children: ' + JSON.stringify(data) + '}', err => {
     if (err) {
       console.error(err);
     }
@@ -34,15 +36,7 @@ fs.writeFile('./data.json', JSON.stringify(data), err => {
 
 
 
-
-
-
-
-
-
-
-
-
+// Ideally I could fetch things from github directly but struggling with auth
 
 // const query = `
 // query d3repos {
