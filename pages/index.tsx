@@ -2,8 +2,20 @@ import Head from "next/head";
 import { CircularPacking } from "../components/CircularPacking";
 import styles from "../styles/Home.module.css";
 import { data } from "../data/data";
+import { useState } from "react";
+
+const buttonStyle = {
+  border: "1px solid #9a6fb0",
+  borderRadius: "3px",
+  padding: "4px 8px",
+  margin: "10px 2px",
+  fontSize: 14,
+  color: "#9a6fb0",
+};
 
 export default function Home() {
+  const [type, setType] = useState<"circlepack" | "barplot">("circlepack");
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +25,16 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <CircularPacking width={900} height={800} data={data} />
+        <div>
+          <button style={buttonStyle} onClick={() => setType("circlepack")}>
+            Circlepack
+          </button>
+          <button style={buttonStyle} onClick={() => setType("barplot")}>
+            Barplot
+          </button>
+        </div>
+
+        <CircularPacking width={900} height={800} data={data} type={type} />
       </main>
 
       <footer className={styles.footer}>Powered by Yan Holtz </footer>

@@ -1,8 +1,9 @@
 export type TreeNode = {
-    type?: 'node';
     value: number;
     name: string;
     stargazerCount: number;
+    url: string;
+    forkCount: number;
     children: Tree[];
   };
 
