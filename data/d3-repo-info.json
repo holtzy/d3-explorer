@@ -1,0 +1,771 @@
+{
+  "data": {
+    "repositoryOwner": {
+      "repositories": {
+        "pageInfo": {
+          "hasNextPage": false,
+          "endCursor": "Y3Vyc29yOnYyOpHOHl-ByQ=="
+        },
+        "totalCount": 54,
+        "nodes": [
+          {
+            "name": "d3",
+            "url": "https://github.com/d3/d3",
+            "description": "Bring data to life with SVG, Canvas and HTML. :bar_chart::chart_with_upwards_trend::tada:",
+            "forkCount": 23205,
+            "stargazerCount": 103448,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": true,
+                "endCursor": "Y3Vyc29yOnYyOpHOAA1zUQ=="
+              },
+              "totalCount": 2120
+            }
+          },
+          {
+            "name": "d3-queue",
+            "url": "https://github.com/d3/d3-queue",
+            "description": "Evaluate asynchronous tasks with configurable concurrency.",
+            "forkCount": 148,
+            "stargazerCount": 1413,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOJrQH2g=="
+              },
+              "totalCount": 48
+            }
+          },
+          {
+            "name": "d3-plugins",
+            "url": "https://github.com/d3/d3-plugins",
+            "description": "[DEPRECATED] A repository for sharing D3.js V3 plugins.",
+            "forkCount": 704,
+            "stargazerCount": 1810,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOFR1Ngw=="
+              },
+              "totalCount": 100
+            }
+          },
+          {
+            "name": "d3.github.com",
+            "url": "https://github.com/d3/d3.github.com",
+            "description": "The D3 website.",
+            "forkCount": 154,
+            "stargazerCount": 194,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": null
+              },
+              "totalCount": 0
+            }
+          },
+          {
+            "name": "d3-dsv",
+            "url": "https://github.com/d3/d3-dsv",
+            "description": "A parser and formatter for delimiter-separated values, such as CSV and TSV.",
+            "forkCount": 78,
+            "stargazerCount": 384,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOVizlbQ=="
+              },
+              "totalCount": 52
+            }
+          },
+          {
+            "name": "d3-geo-projection",
+            "url": "https://github.com/d3/d3-geo-projection",
+            "description": "Extended geographic projections for d3-geo.",
+            "forkCount": 205,
+            "stargazerCount": 990,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": true,
+                "endCursor": "Y3Vyc29yOnYyOpHOQq2alQ=="
+              },
+              "totalCount": 102
+            }
+          },
+          {
+            "name": "d3-selection",
+            "url": "https://github.com/d3/d3-selection",
+            "description": "Transform the DOM by selecting elements and joining to data.",
+            "forkCount": 304,
+            "stargazerCount": 512,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": true,
+                "endCursor": "Y3Vyc29yOnYyOpHODLuCCA=="
+              },
+              "totalCount": 215
+            }
+          },
+          {
+            "name": "d3-selection-multi",
+            "url": "https://github.com/d3/d3-selection-multi",
+            "description": "Multi-value syntax for d3-selection and d3-transition.",
+            "forkCount": 16,
+            "stargazerCount": 73,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOFxZYPw=="
+              },
+              "totalCount": 16
+            }
+          },
+          {
+            "name": "d3-bundler",
+            "url": "https://github.com/d3/d3-bundler",
+            "description": "DEPRECATED; use rollup/rollup.",
+            "forkCount": 9,
+            "stargazerCount": 33,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": null
+              },
+              "totalCount": 0
+            }
+          },
+          {
+            "name": "d3-transition",
+            "url": "https://github.com/d3/d3-transition",
+            "description": "Animated transitions for D3 selections.",
+            "forkCount": 61,
+            "stargazerCount": 197,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": true,
+                "endCursor": "Y3Vyc29yOnYyOpHONTpUpw=="
+              },
+              "totalCount": 104
+            }
+          },
+          {
+            "name": "d3-ease",
+            "url": "https://github.com/d3/d3-ease",
+            "description": "Easing functions for smooth animation.",
+            "forkCount": 48,
+            "stargazerCount": 590,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOJ4n3Rw=="
+              },
+              "totalCount": 16
+            }
+          },
+          {
+            "name": "d3-color",
+            "url": "https://github.com/d3/d3-color",
+            "description": "Color spaces! RGB, HSL, Cubehelix, CIELAB, and more.",
+            "forkCount": 88,
+            "stargazerCount": 353,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOU37Tdg=="
+              },
+              "totalCount": 60
+            }
+          },
+          {
+            "name": "d3-array",
+            "url": "https://github.com/d3/d3-array",
+            "description": "Array manipulation, ordering, searching, summarizing, etc.",
+            "forkCount": 185,
+            "stargazerCount": 406,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": true,
+                "endCursor": "Y3Vyc29yOnYyOpHOJhTbbA=="
+              },
+              "totalCount": 143
+            }
+          },
+          {
+            "name": "d3-dispatch",
+            "url": "https://github.com/d3/d3-dispatch",
+            "description": "Register named callbacks and call them with arguments.",
+            "forkCount": 25,
+            "stargazerCount": 71,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOVTj-TQ=="
+              },
+              "totalCount": 17
+            }
+          },
+          {
+            "name": "d3-request",
+            "url": "https://github.com/d3/d3-request",
+            "description": "A convenient alternative to XMLHttpRequest.",
+            "forkCount": 55,
+            "stargazerCount": 107,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOFfv2RQ=="
+              },
+              "totalCount": 32
+            }
+          },
+          {
+            "name": "d3-timer",
+            "url": "https://github.com/d3/d3-timer",
+            "description": "An efficient queue for managing thousands of concurrent animations.",
+            "forkCount": 43,
+            "stargazerCount": 154,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHONvwWLg=="
+              },
+              "totalCount": 27
+            }
+          },
+          {
+            "name": "d3-random",
+            "url": "https://github.com/d3/d3-random",
+            "description": "Generate random numbers from various distributions.",
+            "forkCount": 35,
+            "stargazerCount": 130,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOK_qLXw=="
+              },
+              "totalCount": 16
+            }
+          },
+          {
+            "name": "d3-interpolate",
+            "url": "https://github.com/d3/d3-interpolate",
+            "description": "Interpolate numbers, colors, strings, arrays, objects, whatever!",
+            "forkCount": 72,
+            "stargazerCount": 427,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOVgxI4Q=="
+              },
+              "totalCount": 64
+            }
+          },
+          {
+            "name": "d3-format",
+            "url": "https://github.com/d3/d3-format",
+            "description": "Format numbers for human consumption.",
+            "forkCount": 105,
+            "stargazerCount": 547,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOVJMgFQ=="
+              },
+              "totalCount": 82
+            }
+          },
+          {
+            "name": "d3-scale",
+            "url": "https://github.com/d3/d3-scale",
+            "description": "Encodings that map abstract data to visual representation.",
+            "forkCount": 290,
+            "stargazerCount": 1481,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": true,
+                "endCursor": "Y3Vyc29yOnYyOpHOEoNglg=="
+              },
+              "totalCount": 186
+            }
+          },
+          {
+            "name": "d3-time",
+            "url": "https://github.com/d3/d3-time",
+            "description": "A calculator for humanity’s peculiar conventions of time.",
+            "forkCount": 59,
+            "stargazerCount": 214,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOT36Z2w=="
+              },
+              "totalCount": 35
+            }
+          },
+          {
+            "name": "d3-time-format",
+            "url": "https://github.com/d3/d3-time-format",
+            "description": "Parse and format times, inspired by strptime and strftime.",
+            "forkCount": 100,
+            "stargazerCount": 296,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOT1QTBw=="
+              },
+              "totalCount": 62
+            }
+          },
+          {
+            "name": "d3-quadtree",
+            "url": "https://github.com/d3/d3-quadtree",
+            "description": "Two-dimensional recursive spatial subdivision.",
+            "forkCount": 50,
+            "stargazerCount": 201,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOSM2P_A=="
+              },
+              "totalCount": 29
+            }
+          },
+          {
+            "name": "d3-hull",
+            "url": "https://github.com/d3/d3-hull",
+            "description": "DEPRECATED; see d3-polygon’s hull function.",
+            "forkCount": 11,
+            "stargazerCount": 13,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": null
+              },
+              "totalCount": 0
+            }
+          },
+          {
+            "name": "d3-voronoi",
+            "url": "https://github.com/d3/d3-voronoi",
+            "description": "Compute the Voronoi diagram of a set of two-dimensional points.",
+            "forkCount": 60,
+            "stargazerCount": 247,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOF8CnRA=="
+              },
+              "totalCount": 25
+            }
+          },
+          {
+            "name": "d3-path",
+            "url": "https://github.com/d3/d3-path",
+            "description": "Serialize Canvas path commands to SVG.",
+            "forkCount": 40,
+            "stargazerCount": 181,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOME8UgA=="
+              },
+              "totalCount": 15
+            }
+          },
+          {
+            "name": "d3-shape",
+            "url": "https://github.com/d3/d3-shape",
+            "description": "Graphical primitives for visualization, such as lines and areas.",
+            "forkCount": 312,
+            "stargazerCount": 2346,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": true,
+                "endCursor": "Y3Vyc29yOnYyOpHOF2-Acg=="
+              },
+              "totalCount": 134
+            }
+          },
+          {
+            "name": "d3-polygon",
+            "url": "https://github.com/d3/d3-polygon",
+            "description": "Geometric operations for two-dimensional polygons.",
+            "forkCount": 24,
+            "stargazerCount": 91,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOK-9OZw=="
+              },
+              "totalCount": 21
+            }
+          },
+          {
+            "name": "d3-hierarchy",
+            "url": "https://github.com/d3/d3-hierarchy",
+            "description": "2D layout algorithms for visualizing hierarchical data.",
+            "forkCount": 303,
+            "stargazerCount": 880,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": true,
+                "endCursor": "Y3Vyc29yOnYyOpHOFf2U2w=="
+              },
+              "totalCount": 140
+            }
+          },
+          {
+            "name": "d3-force",
+            "url": "https://github.com/d3/d3-force",
+            "description": "Force-directed graph layout using velocity Verlet integration.",
+            "forkCount": 347,
+            "stargazerCount": 1458,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": true,
+                "endCursor": "Y3Vyc29yOnYyOpHOFE1zuw=="
+              },
+              "totalCount": 151
+            }
+          },
+          {
+            "name": "d3-sankey",
+            "url": "https://github.com/d3/d3-sankey",
+            "description": "Visualize flow between nodes in a directed acyclic network.",
+            "forkCount": 235,
+            "stargazerCount": 678,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOVXd7Ow=="
+              },
+              "totalCount": 71
+            }
+          },
+          {
+            "name": "d3-chord",
+            "url": "https://github.com/d3/d3-chord",
+            "description": "Visualizations relationships or network flow with a circular layout.",
+            "forkCount": 44,
+            "stargazerCount": 115,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOSDfv_Q=="
+              },
+              "totalCount": 12
+            }
+          },
+          {
+            "name": "d3-hexbin",
+            "url": "https://github.com/d3/d3-hexbin",
+            "description": "Group two-dimensional points into hexagonal bins.",
+            "forkCount": 33,
+            "stargazerCount": 208,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOUTBfGw=="
+              },
+              "totalCount": 16
+            }
+          },
+          {
+            "name": "d3-logo",
+            "url": "https://github.com/d3/d3-logo",
+            "description": "D3 brand assets.",
+            "forkCount": 20,
+            "stargazerCount": 22,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOVa93JA=="
+              },
+              "totalCount": 1
+            }
+          },
+          {
+            "name": "d3-axis",
+            "url": "https://github.com/d3/d3-axis",
+            "description": "Human-readable reference marks for scales.",
+            "forkCount": 112,
+            "stargazerCount": 190,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOSipkRw=="
+              },
+              "totalCount": 57
+            }
+          },
+          {
+            "name": "d3-collection",
+            "url": "https://github.com/d3/d3-collection",
+            "description": "Handy data structures for elements keyed by string.",
+            "forkCount": 42,
+            "stargazerCount": 109,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOFSGrrg=="
+              },
+              "totalCount": 19
+            }
+          },
+          {
+            "name": "d3-geo",
+            "url": "https://github.com/d3/d3-geo",
+            "description": "Geographic projections, spherical shapes and spherical trigonometry.",
+            "forkCount": 156,
+            "stargazerCount": 886,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": true,
+                "endCursor": "Y3Vyc29yOnYyOpHOF8WzwA=="
+              },
+              "totalCount": 168
+            }
+          },
+          {
+            "name": "d3-drag",
+            "url": "https://github.com/d3/d3-drag",
+            "description": "Drag and drop SVG, HTML or Canvas using mouse or touch input.",
+            "forkCount": 61,
+            "stargazerCount": 282,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOPO0LQQ=="
+              },
+              "totalCount": 67
+            }
+          },
+          {
+            "name": "d3-zoom",
+            "url": "https://github.com/d3/d3-zoom",
+            "description": "Pan and zoom SVG, HTML or Canvas using mouse or touch input.",
+            "forkCount": 138,
+            "stargazerCount": 401,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": true,
+                "endCursor": "Y3Vyc29yOnYyOpHOD3r98A=="
+              },
+              "totalCount": 213
+            }
+          },
+          {
+            "name": "d3-brush",
+            "url": "https://github.com/d3/d3-brush",
+            "description": "Select a one- or two-dimensional region using the mouse or touch.",
+            "forkCount": 53,
+            "stargazerCount": 144,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOU3LF8g=="
+              },
+              "totalCount": 72
+            }
+          },
+          {
+            "name": "d3-scale-chromatic",
+            "url": "https://github.com/d3/d3-scale-chromatic",
+            "description": "Sequential, diverging and categorical color scales.",
+            "forkCount": 105,
+            "stargazerCount": 713,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOVaoJ9w=="
+              },
+              "totalCount": 25
+            }
+          },
+          {
+            "name": "d3-hsv",
+            "url": "https://github.com/d3/d3-hsv",
+            "description": "The HSV (Hue, Saturation, Value) color space.",
+            "forkCount": 12,
+            "stargazerCount": 25,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOEt8olQ=="
+              },
+              "totalCount": 2
+            }
+          },
+          {
+            "name": "d3-tile",
+            "url": "https://github.com/d3/d3-tile",
+            "description": "Compute the quadtree tiles to display in a rectangular viewport.",
+            "forkCount": 25,
+            "stargazerCount": 114,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHON4CUQQ=="
+              },
+              "totalCount": 36
+            }
+          },
+          {
+            "name": "d3-3.x-api-reference",
+            "url": "https://github.com/d3/d3-3.x-api-reference",
+            "description": "An archive of the D3 3.x API Reference.",
+            "forkCount": 270,
+            "stargazerCount": 145,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": null
+              },
+              "totalCount": 0
+            }
+          },
+          {
+            "name": "d3-hcg",
+            "url": "https://github.com/d3/d3-hcg",
+            "description": "The HCG (Hue, Chroma, Grayness) color space derived from the Munsell color system. ",
+            "forkCount": 10,
+            "stargazerCount": 19,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOIBKXKg=="
+              },
+              "totalCount": 1
+            }
+          },
+          {
+            "name": "d3-fetch",
+            "url": "https://github.com/d3/d3-fetch",
+            "description": "Convenient parsing for Fetch.",
+            "forkCount": 36,
+            "stargazerCount": 207,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOTi4uNw=="
+              },
+              "totalCount": 32
+            }
+          },
+          {
+            "name": "d3-contour",
+            "url": "https://github.com/d3/d3-contour",
+            "description": "Compute contour polygons using marching squares.",
+            "forkCount": 57,
+            "stargazerCount": 443,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOUcukXg=="
+              },
+              "totalCount": 40
+            }
+          },
+          {
+            "name": "d3-require",
+            "url": "https://github.com/d3/d3-require",
+            "description": "A minimal, promise-based implementation to require asynchronous module definitions.",
+            "forkCount": 22,
+            "stargazerCount": 70,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOI7X8Xw=="
+              },
+              "totalCount": 16
+            }
+          },
+          {
+            "name": "d3-scripts",
+            "url": "https://github.com/d3/d3-scripts",
+            "description": "Common scripts for D3 modules.",
+            "forkCount": 9,
+            "stargazerCount": 14,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOD18rQA=="
+              },
+              "totalCount": 4
+            }
+          },
+          {
+            "name": "d3-geo-polygon",
+            "url": "https://github.com/d3/d3-geo-polygon",
+            "description": "Clipping and geometric operations for spherical polygons.",
+            "forkCount": 22,
+            "stargazerCount": 93,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOMFkqKw=="
+              },
+              "totalCount": 28
+            }
+          },
+          {
+            "name": "versor",
+            "url": "https://github.com/d3/versor",
+            "description": "a home for Mike Bostock's versor.js",
+            "forkCount": 10,
+            "stargazerCount": 29,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHONghbnQ=="
+              },
+              "totalCount": 7
+            }
+          },
+          {
+            "name": "d3-delaunay",
+            "url": "https://github.com/d3/d3-delaunay",
+            "description": "Compute the Voronoi diagram of a set of two-dimensional points.",
+            "forkCount": 50,
+            "stargazerCount": 527,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOSp2XGQ=="
+              },
+              "totalCount": 84
+            }
+          },
+          {
+            "name": "d3-cam16",
+            "url": "https://github.com/d3/d3-cam16",
+            "description": "A d3 implementation of the CIECAM16 color appearance model.",
+            "forkCount": 13,
+            "stargazerCount": 18,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": "Y3Vyc29yOnYyOpHOGVmRqA=="
+              },
+              "totalCount": 2
+            }
+          },
+          {
+            "name": "blur-benchmark",
+            "url": "https://github.com/d3/blur-benchmark",
+            "description": "temporary benchmark for d3.blur implementations",
+            "forkCount": 2,
+            "stargazerCount": 1,
+            "issues": {
+              "pageInfo": {
+                "hasNextPage": false,
+                "endCursor": null
+              },
+              "totalCount": 0
+            }
+          }
+        ]
+      }
+    }
+  }
+}

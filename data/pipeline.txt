@@ -1,0 +1,50 @@
+Pipeline to build the dataset used in this repo
+
+#
+# Step 1: fetch repo info thanks to the github graphiQl explorer
+#
+go to https://docs.github.com/en/graphql/overview/explorer
+use this
+
+{
+  repositoryOwner(login: "d3") {
+    repositories(first: 100) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      totalCount
+      nodes {
+        name
+        url
+        description
+        descriptionHTML
+        forkCount
+        stargazerCount
+        issues(first: 100) {
+          pageInfo {
+            hasNextPage
+            endCursor
+          }
+          totalCount
+        }
+      }
+    }
+  }
+}
+
+copy paste the result in d3-repo-info.json
+
+
+
+#
+# Step 2: find the list of function per repo
+#
+Comes from Amelia's Wattenberger work:
+https://github.com/Wattenberger/Wattenberger-2019/blob/master/src/components/Blog/posts/LearnD3/modules.json
+Copy it in modules.json
+
+
+#
+# Step 3: script to merge and clean
+#
