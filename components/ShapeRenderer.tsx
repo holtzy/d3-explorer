@@ -4,15 +4,21 @@ import * as d3 from "d3";
 import { useMemo, useRef } from "react";
 
 type ShapeRendererProps = {
-  node: {
+  circle: {
     x: number;
     y: number;
     r: number;
   };
+  rect: {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+  };
   type: "circlepack" | "barplot";
 };
 
-export const ShapeRenderer = ({ node, type }: ShapeRendererProps) => {
+export const ShapeRenderer = ({ circle, rect, type }: ShapeRendererProps) => {
   // keep track of last used pathD to interpolate from
   const currPAth = useRef();
   const currType = useRef(type);
@@ -21,8 +27,13 @@ export const ShapeRenderer = ({ node, type }: ShapeRendererProps) => {
   const pathInterpolator = useMemo(
     () =>
       type === "circlepack"
-        ? toCircle(currPAth.current || "M0,0 L0,0Z", node.x, node.y, node.r)
-        : toRect(currPAth.current, 10, 10, 200, 200),
+        ? toCircle(
+            currPAth.current || "M0,0 L0,0Z",
+            circle.x,
+            circle.y,
+            circle.r
+          )
+        : toRect(currPAth.current, rect.x, rect.y, rect.width, rect.height),
     [type]
   );
 
