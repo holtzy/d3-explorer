@@ -16,9 +16,15 @@ type ShapeRendererProps = {
     height: number;
   };
   type: "circlepack" | "barplot";
+  index: number;
 };
 
-export const ShapeRenderer = ({ circle, rect, type }: ShapeRendererProps) => {
+export const ShapeRenderer = ({
+  circle,
+  rect,
+  type,
+  index,
+}: ShapeRendererProps) => {
   // keep track of last used pathD to interpolate from
   const currPAth = useRef();
   const currType = useRef(type);
@@ -49,6 +55,7 @@ export const ShapeRenderer = ({ circle, rect, type }: ShapeRendererProps) => {
       currType.current = type;
     },
     config: config.molasses,
+    // delay: index * 10,
   });
 
   return (
@@ -58,7 +65,7 @@ export const ShapeRenderer = ({ circle, rect, type }: ShapeRendererProps) => {
       stroke="#9a6fb0"
       fill="#9a6fb0"
       fillOpacity={0.3}
-      strokeWidth={2}
+      strokeWidth={1}
     />
   );
 };

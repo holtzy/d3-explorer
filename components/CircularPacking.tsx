@@ -64,6 +64,7 @@ export const CircularPacking = ({
             width: xScale(node.data.forkCount),
             height: yScale.bandwidth(),
           }}
+          index={i}
         />
       );
     });
