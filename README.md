@@ -1,2 +1,1 @@
-# d3-explorer
-Exploration of the d3.js codebase
+exploring the d3 codebase
