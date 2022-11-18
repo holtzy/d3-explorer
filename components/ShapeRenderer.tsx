@@ -9,7 +9,7 @@ type ShapeRendererProps = {
     y: number;
     r: number;
   };
-  rect: {
+  rectBarplot: {
     x: number;
     y: number;
     width: number;
@@ -21,7 +21,7 @@ type ShapeRendererProps = {
 
 export const ShapeRenderer = ({
   circle,
-  rect,
+  rectBarplot,
   type,
   index,
 }: ShapeRendererProps) => {
@@ -39,7 +39,13 @@ export const ShapeRenderer = ({
             circle.y,
             circle.r
           )
-        : toRect(currPAth.current, rect.x, rect.y, rect.width, rect.height),
+        : toRect(
+            currPAth.current,
+            rectBarplot.x,
+            rectBarplot.y,
+            rectBarplot.width,
+            rectBarplot.height
+          ),
     [type]
   );
 

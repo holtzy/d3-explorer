@@ -12,6 +12,7 @@ let modules = JSON.parse(rawModules);
 const data = repos.data.repositoryOwner.repositories.nodes
 
     .filter(repo => repo.name !== 'd3')
+
     .map( repo => {
 
         const details = modules.filter( module => module.repo === repo.name)

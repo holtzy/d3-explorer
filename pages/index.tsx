@@ -14,7 +14,9 @@ const buttonStyle = {
 };
 
 export default function Home() {
-  const [type, setType] = useState<"circlepack" | "barplot">("circlepack");
+  const [type, setType] = useState<"circlepack" | "barplot" | "treemap">(
+    "circlepack"
+  );
 
   return (
     <div className={styles.container}>
@@ -31,6 +33,9 @@ export default function Home() {
           </button>
           <button style={buttonStyle} onClick={() => setType("barplot")}>
             Barplot
+          </button>
+          <button style={buttonStyle} onClick={() => setType("treemap")}>
+            Treemap
           </button>
         </div>
 

@@ -7,7 +7,7 @@ type CircularPackingProps = {
   width: number;
   height: number;
   data: TreeNode;
-  type: "circlepack" | "barplot";
+  type: "circlepack" | "barplot" | "treemap";
 };
 
 export const CircularPacking = ({
@@ -16,7 +16,9 @@ export const CircularPacking = ({
   data,
   type,
 }: CircularPackingProps) => {
-  // compute shape information for circle pack
+  //
+  // Circle pack
+  //
   const hierarchy = useMemo(() => {
     return d3
       .hierarchy(data)
@@ -24,15 +26,26 @@ export const CircularPacking = ({
       .sort((a, b) => b.forkCount! - a.forkCount!);
   }, [data]);
 
-  const root = useMemo(() => {
+  const rootCirclePack = useMemo(() => {
     const packGenerator = d3.pack<Tree>().size([width, height]).padding(4);
     return packGenerator(hierarchy);
   }, [hierarchy, width, height]);
 
-  // compute shape information for bar plot
+  //
+  // Treemap
+  //
+  const rootTreemap = useMemo(() => {
+    const treeGenerator = d3.treemap<Tree>().size([width, height]).padding(4);
+    return treeGenerator(hierarchy);
+  }, [hierarchy, width, height]);
+
+  //
+  // Bar plot
+  //
   const groups = data.children
     .sort((a, b) => b.forkCount - a.forkCount)
     .map((d) => d.name);
+
   const yScale = useMemo(() => {
     return d3.scaleBand().domain(groups).range([0, height]).padding(0.2);
   }, [data, height]);
@@ -47,18 +60,17 @@ export const CircularPacking = ({
   }, [data, width]);
 
   // create shapes
-  const allShapes = root
+  const allShapes = rootCirclePack
     .descendants()
     .slice(1)
     .filter((node) => node.depth === 1)
     .map((node, i) => {
-      console.log(node);
       return (
         <ShapeRenderer
           key={i}
           type={type}
           circle={{ x: node.x, y: node.y, r: node.r }}
-          rect={{
+          rectBarplot={{
             x: xScale(0),
             y: yScale(node.data.name),
             width: xScale(node.data.forkCount),
