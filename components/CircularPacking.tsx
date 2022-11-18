@@ -3,12 +3,13 @@ import * as d3 from "d3";
 import { Tree, TreeNode } from "../data/data-types";
 import { ShapeRenderer } from "./ShapeRenderer";
 import { buildCirclePath, buildRectPath, polygon } from "./utils";
+import { cloneDeep } from "lodash";
 
 type CircularPackingProps = {
   width: number;
   height: number;
   data: TreeNode;
-  type: "circlepack" | "barplot" | "treemap";
+  type: "circlepack" | "barplot" | "treemap" | "dendrogram";
 };
 
 export const CircularPacking = ({
@@ -30,6 +31,7 @@ export const CircularPacking = ({
       .sum((d) => d.forkCount)
       .sort((a, b) => b.forkCount! - a.forkCount!);
   }, [data]);
+  const hierarchyClone = cloneDeep(hierarchy);
 
   const rootCirclePack = useMemo(() => {
     const packGenerator = d3.pack<Tree>().size([width, height]).padding(4);
@@ -43,6 +45,14 @@ export const CircularPacking = ({
     const treeGenerator = d3.treemap<Tree>().size([width, height]).padding(4);
     return treeGenerator(hierarchy);
   }, [hierarchy, width, height]);
+
+  //
+  // Dendrogram
+  //
+  const rootDendrogram = useMemo(() => {
+    const dendroGenerator = d3.tree().size([360, width / 2 - 60]);
+    return dendroGenerator(hierarchyClone);
+  }, [hierarchyClone, width, height]);
 
   //
   // Bar plot
@@ -72,6 +82,12 @@ export const CircularPacking = ({
         .filter((node) => node.depth === 1)
         .filter((n) => n.data.name === node.data.name)[0];
 
+      const dendrogramNode = rootDendrogram
+        .descendants()
+        .slice(1)
+        .filter((node) => node.depth === 1)
+        .filter((n) => n.data.name === node.data.name)[0];
+
       const path =
         type === "circlepack"
           ? polygon(node.x, node.y, node.r, 100)
@@ -82,6 +98,8 @@ export const CircularPacking = ({
               xScale(node.data.forkCount),
               yScale.bandwidth()
             )
+          : type === "dendrogram"
+          ? polygon(dendrogramNode.x, dendrogramNode.y, 10, 100)
           : buildRectPath(
               treemapNode.x0,
               treemapNode.y0,

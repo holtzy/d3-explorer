@@ -18,6 +18,8 @@
     "eslint-config-next": "13.0.3",
     "flubber": "^0.4.2",
     "fs": "^0.0.1-security",
+    "lodash": "^4.17.21",
+    "mathjs": "^11.3.3",
     "next": "13.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",

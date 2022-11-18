@@ -1,3 +1,5 @@
+import { matrix, cos, sin } from "mathjs";
+
 // https://stackoverflow.com/questions/5737975/circle-drawing-with-svgs-arc-path
 export function buildCirclePath(cx: number, cy: number, r: number) {
   return (
@@ -68,4 +70,17 @@ export function polygon(x:number, y:number, radius:number, npoints:number) {
   path += "Z"
 
   return path
+}
+
+export const rotate = (a:number, cx: number, cy: number) => {
+  return(
+    matrix(
+      cos(a),
+      sin(a),
+      -sin(a),
+      cos(a),
+      cx(1 - cos(a)) + cy(sin(a)),
+      cy(1 - cos(a)) - cx(sin(a))
+    )
+  )
 }
