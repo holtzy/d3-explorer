@@ -107,7 +107,16 @@ export const CircularPacking = ({
               treemapNode.y1 - treemapNode.y0
             );
 
-      return <ShapeRenderer key={i} path={path} />;
+      const color =
+        type === "circlepack"
+          ? "red"
+          : type === "barplot"
+          ? "blue"
+          : type === "dendrogram"
+          ? "green"
+          : "white";
+
+      return <ShapeRenderer key={i} path={path} color={color} />;
     });
 
   return (
