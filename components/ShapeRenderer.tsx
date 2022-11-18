@@ -1,52 +1,19 @@
-import { toRect, toCircle } from "flubber";
+import { toRect, toCircle, interpolate } from "flubber";
 import { animated, useSpring, config, to } from "react-spring";
-import * as d3 from "d3";
 import { useMemo, useRef } from "react";
 
 type ShapeRendererProps = {
-  circle: {
-    x: number;
-    y: number;
-    r: number;
-  };
-  rectBarplot: {
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-  };
-  type: "circlepack" | "barplot";
-  index: number;
+  path: string;
 };
 
-export const ShapeRenderer = ({
-  circle,
-  rectBarplot,
-  type,
-  index,
-}: ShapeRendererProps) => {
+export const ShapeRenderer = ({ path }: ShapeRendererProps) => {
   // keep track of last used pathD to interpolate from
-  const currPAth = useRef();
-  const currType = useRef(type);
+  const currD = useRef(path);
 
   // create an interpolator that maps from the current shape (at t=0) to the new provided path (at t=1)
   const pathInterpolator = useMemo(
-    () =>
-      type === "circlepack"
-        ? toCircle(
-            currPAth.current || "M0,0 L0,0Z",
-            circle.x,
-            circle.y,
-            circle.r
-          )
-        : toRect(
-            currPAth.current,
-            rectBarplot.x,
-            rectBarplot.y,
-            rectBarplot.width,
-            rectBarplot.height
-          ),
-    [type]
+    () => interpolate(currD.current, path),
+    [path]
   );
 
   // create a spring that maps from t = 0 (start animation) to t = 1 (end of animation)
@@ -54,14 +21,13 @@ export const ShapeRenderer = ({
     from: { t: 0 },
     to: { t: 1 },
     // reset t to 0 when the path changes so we can begin interpolating anew
-    reset: currType.current !== type,
+    reset: currD.current !== path,
     // when t updates, update the last seen D so we can handle interruptions
     onChange: ({ t }) => {
-      currPAth.current = pathInterpolator(t || 1);
-      currType.current = type;
+      currD.current = pathInterpolator(t || 1);
     },
     config: config.molasses,
-    // delay: index * 10,
+    // delay: 1000,
   });
 
   return (

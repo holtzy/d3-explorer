@@ -39,7 +39,7 @@ export default function Home() {
           </button>
         </div>
 
-        <CircularPacking width={900} height={800} data={data} type={type} />
+        <CircularPacking width={900} height={600} data={data} type={type} />
       </main>
 
       <footer className={styles.footer}>Powered by Yan Holtz </footer>

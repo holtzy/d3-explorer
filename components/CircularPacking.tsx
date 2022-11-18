@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import * as d3 from "d3";
 import { Tree, TreeNode } from "../data/data-types";
 import { ShapeRenderer } from "./ShapeRenderer";
+import { buildCirclePath, buildRectPath, polygon } from "./utils";
 
 type CircularPackingProps = {
   width: number;
@@ -16,6 +17,10 @@ export const CircularPacking = ({
   data,
   type,
 }: CircularPackingProps) => {
+  const groups = data.children
+    .sort((a, b) => b.forkCount - a.forkCount)
+    .map((d) => d.name);
+
   //
   // Circle pack
   //
@@ -42,12 +47,8 @@ export const CircularPacking = ({
   //
   // Bar plot
   //
-  const groups = data.children
-    .sort((a, b) => b.forkCount - a.forkCount)
-    .map((d) => d.name);
-
   const yScale = useMemo(() => {
-    return d3.scaleBand().domain(groups).range([0, height]).padding(0.2);
+    return d3.scaleBand().domain(groups).range([0, height]).padding(0.6);
   }, [data, height]);
 
   // X axis
@@ -65,20 +66,30 @@ export const CircularPacking = ({
     .slice(1)
     .filter((node) => node.depth === 1)
     .map((node, i) => {
-      return (
-        <ShapeRenderer
-          key={i}
-          type={type}
-          circle={{ x: node.x, y: node.y, r: node.r }}
-          rectBarplot={{
-            x: xScale(0),
-            y: yScale(node.data.name),
-            width: xScale(node.data.forkCount),
-            height: yScale.bandwidth(),
-          }}
-          index={i}
-        />
-      );
+      const treemapNode = rootTreemap
+        .descendants()
+        .slice(1)
+        .filter((node) => node.depth === 1)
+        .filter((n) => n.data.name === node.data.name)[0];
+
+      const path =
+        type === "circlepack"
+          ? polygon(node.x, node.y, node.r, 100)
+          : type === "barplot"
+          ? buildRectPath(
+              xScale(0),
+              yScale(node.data.name),
+              xScale(node.data.forkCount),
+              yScale.bandwidth()
+            )
+          : buildRectPath(
+              treemapNode.x0,
+              treemapNode.y0,
+              treemapNode.x1 - treemapNode.x0,
+              treemapNode.y1 - treemapNode.y0
+            );
+
+      return <ShapeRenderer key={i} path={path} />;
     });
 
   return (
