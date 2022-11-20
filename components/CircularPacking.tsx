@@ -60,8 +60,6 @@ export const CircularPacking = ({
   const yScale = useMemo(() => {
     return d3.scaleBand().domain(groups).range([0, height]).padding(0.6);
   }, [data, height]);
-
-  // X axis
   const xScale = useMemo(() => {
     const [min, max] = d3.extent(data.children.map((d) => d.forkCount));
     return d3
@@ -119,9 +117,33 @@ export const CircularPacking = ({
       return <ShapeRenderer key={i} path={path} color={color} />;
     });
 
+  const circlePackLabels = rootCirclePack
+    .descendants()
+    .slice(1)
+    .filter((node) => node.depth === 1)
+    .map((node, i) => {
+      return (
+        <text
+          style={{ transition: "all 1s" }}
+          key={node.data.name}
+          x={node.x}
+          y={node.y}
+          fontSize={11}
+          fontWeight={0.1}
+          textAnchor="middle"
+          alignmentBaseline="middle"
+          fill={"white"}
+          opacity={type === "circlepack" ? 0.7 : 0}
+        >
+          {node.data.name}
+        </text>
+      );
+    });
+
   return (
     <svg width={width} height={height}>
       {allShapes}
+      {circlePackLabels}
     </svg>
   );
 };

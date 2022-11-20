@@ -1,6 +1,7 @@
 import { toRect, toCircle, interpolate } from "flubber";
 import { animated, useSpring, config, to } from "react-spring";
 import { useMemo, useRef } from "react";
+import styles from "./shape-renderer.module.css";
 
 type ShapeRendererProps = {
   path: string;
@@ -29,18 +30,22 @@ export const ShapeRenderer = ({ path, color }: ShapeRendererProps) => {
       console.log("all", all);
       pathRef.current = pathInterpolator(all.value.t || 1);
       colorRef.current = all.value.color;
+      if (all.finished) {
+        all.value.t = 0;
+      }
     },
     config: config.molasses,
-    // delay: 1000,
+    delay: 1000, // no fucking way to make it work
   });
 
   return (
     <animated.path
+      className={styles.glow}
       d={springValues.t.to((value) => pathInterpolator(value))} // equivalent to d={to(springValues.t, pathInterpolator)}
       opacity={springValues.opacity}
-      stroke="transparent"
-      fill={springValues.color}
-      fillOpacity={0.3}
+      stroke={springValues.color}
+      fill={"none"}
+      fillOpacity={0.8}
       strokeWidth={1}
     />
   );
